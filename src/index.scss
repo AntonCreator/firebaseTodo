@@ -1,0 +1,29 @@
+$white: white;
+$yellow: #ffeb3b;
+$gray: rgb(83, 82, 82);
+$dark: #333;
+$silver: rgb(148, 139, 139);
+
+body {
+  font-family: cursive;
+  
+}
+
+.text-yellow {
+  color:$yellow;
+  margin-bottom: 0px;
+}
+
+.darkText {
+  color :$dark
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+small {
+  margin-left: 10px;
+}
