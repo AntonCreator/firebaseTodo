@@ -8,8 +8,15 @@ export const firebaseReducer = (state, {type, payload}) => {
       return ({...state,
                   todos: [...state.todos, payload]})
     case FETCH_TODOS :
-      return ({...state, 
-                  todos : payload})
+      if(payload) {
+        return ({...state, 
+                 todos: payload,
+                 loading: false})
+      } else {
+        return ({...state, 
+          loading: false})
+      }
+      
     case REMOVE_TODO : 
       return ({...state, 
                   todos : state.todos.filter(todo => todo.id !== payload)})

@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import List from "../components/list";
 import Alert from "../components/alert";
 import Form from "../components/form";
+import Loading from "../components/loading"
 import { FirebaseContext } from "../context/firebase/firebaseContext";
 
 const Home = () => {
@@ -16,12 +17,12 @@ const Home = () => {
 
   return (
     <Layout>
-      <Alert/>
-     
+      <Alert/> 
       <div>
         <h2>Task list</h2> 
         <Form />
         <hr/>
+        {loading && <Loading/>}
         <List todos = {todos}></List>
       </div>
     </Layout>

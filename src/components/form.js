@@ -10,9 +10,11 @@ const Form = () => {
   
   const handleSubmit = (event) => {
     event.preventDefault()
-    addTodo(inputValue)
+    
     if(inputValue.trim()) {
-      alert.show("Note created", "success")
+      addTodo(inputValue).then(() => {alert.show("Note created", "success")})
+                         .catch(() => {alert.show("Note didn`t create", "danger")}) 
+      
       setInputValue("")
     } else {
       alert.show("Create note, please" , "warning")
@@ -21,6 +23,7 @@ const Form = () => {
   } 
 
   return (
+    
     <form onSubmit = {handleSubmit}>
       <div className = "form-group">
         <input className="form-control" type="text"

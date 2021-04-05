@@ -21,28 +21,39 @@ const FirebaseState = ({children}) => {
   const fetchTodos = async () => {
     showLoader()
     const res  = await axios.get(`${url}/notes.json`)
-    console.log(res.data)
+    if (res.data) { 
+      const payload = Object.keys(res.data).map(key => { return {...res.data[key],
+      id : key}})
+
+      dispatch({type: FETCH_TODOS,
+                payload}) 
+      } else {
+        const payload = []
+
+        dispatch({type: FETCH_TODOS,
+                  payload}) 
+
+      }
     
-    const payload = Object.keys(res.data).map(key => { return {...res.data[key],
-                                                  id : key}})
-    console.log("fetch todos", payload)
-    dispatch({type: FETCH_TODOS,
-              payload})
   }
 
   const addTodo = async ( title ) => {
     const todo = {
       title,
-      date: new Date().toJSON()
+      date: new Date().toLocaleString()
     }
+    try {
+      const res = await axios.post(`${url}/notes.json`, todo)
+      const payload = {
+         ...todo,
+        id: res.data.name
+      }
+      dispatch({type: ADD_TODO, payload})
 
-    const res = await axios.post(`${url}/notes.json`, todo)
-    console.log( "addTodo", res.data)
-    const payload = {
-      ...todo,
-      id: res.data.name
-    }
-    dispatch({type: ADD_TODO, payload})
+    } catch(error) {
+    throw new Error(error.message)
+  }
+    
   }
 
   const removeTodo = async(id) => {

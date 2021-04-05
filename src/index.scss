@@ -6,6 +6,7 @@ $silver: rgb(148, 139, 139);
 
 body {
   font-family: cursive;
+  background-color: $white;
   
 }
 
@@ -18,12 +19,40 @@ body {
   color :$dark
 }
 
+small {
+  margin-left: 10px;
+}
+
 .todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-small {
-  margin-left: 10px;
+.todo-exit-active {
+  animation : todo 800ms ease-out forwards;
+}
+
+.todo-enter-active {
+  animation : todo 800ms ease-out alternate-reverse;
+}
+
+@keyframes todo {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    opacity: 0.7;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+
+@media (max-width:450px) {
+  .display-4  {
+      font-size: 2em;
+  }
 }

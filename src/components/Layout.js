@@ -6,6 +6,7 @@ const Layout = ({children}) => {
     <div> 
     <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div className="container-fluid">
+        <a className="navbar-brand" href="#!"><p className = "text-yellow">Firebase ToDo 🔥</p></a>
         <button
           className="navbar-toggler"
           type="button"
