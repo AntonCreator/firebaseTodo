@@ -15,7 +15,7 @@ const Alert = () => {
   <button onClick = {hide} type = "button" className = "close" data-dismiss = "alert" aria-label = "Close">
     <span aria-hidden="true">&times;</span>
   </button>
-  <strong>Note created!</strong> {alert.text}
+  <strong>{alert.text}</strong>
 </div>
   )
 }

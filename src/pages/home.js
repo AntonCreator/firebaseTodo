@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 
 import Layout from "../components/Layout";
 import List from "../components/list";
 import Alert from "../components/alert";
 import Form from "../components/form";
+import { FirebaseContext } from "../context/firebase/firebaseContext";
 
 const Home = () => {
 
-  const todos = new Array(3).fill("").map((_, i) => ({id: i, title: `Task ${i + 1}`}))
+  const {loading, todos, fetchTodos} = useContext(FirebaseContext)
+
+  useEffect(() => {
+    fetchTodos()
+  }, [])
 
   return (
     <Layout>

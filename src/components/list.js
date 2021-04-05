@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { FirebaseContext } from "../context/firebase/firebaseContext";
 
 const List = ({todos}) => {
+
+  const {removeTodo} = useContext(FirebaseContext)
+
   return (
     
     <div className = "container"> 
@@ -12,7 +17,7 @@ const List = ({todos}) => {
             
             <small> {new Date().toLocaleDateString()}</small>
           </div>
-          <button className = "btn btn-outline-danger btn-sm">
+          <button onClick = {() => removeTodo(todo.id)} className = "btn btn-outline-danger btn-sm">
             <i className="fa fa-trash" aria-hidden="true"></i>
           </button>
         </li>
