@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/firebaseTodo/static/css/main.fca99832.chunk.css",
+    "main.js": "/firebaseTodo/static/js/main.36345fd8.chunk.js",
+    "main.js.map": "/firebaseTodo/static/js/main.36345fd8.chunk.js.map",
+    "runtime-main.js": "/firebaseTodo/static/js/runtime-main.78648920.js",
+    "runtime-main.js.map": "/firebaseTodo/static/js/runtime-main.78648920.js.map",
+    "static/js/2.4102aa8e.chunk.js": "/firebaseTodo/static/js/2.4102aa8e.chunk.js",
+    "static/js/2.4102aa8e.chunk.js.map": "/firebaseTodo/static/js/2.4102aa8e.chunk.js.map",
+    "index.html": "/firebaseTodo/index.html",
+    "static/css/main.fca99832.chunk.css.map": "/firebaseTodo/static/css/main.fca99832.chunk.css.map",
+    "static/js/2.4102aa8e.chunk.js.LICENSE.txt": "/firebaseTodo/static/js/2.4102aa8e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.78648920.js",
+    "static/js/2.4102aa8e.chunk.js",
+    "static/css/main.fca99832.chunk.css",
+    "static/js/main.36345fd8.chunk.js"
+  ]
+}

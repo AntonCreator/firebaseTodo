@@ -1,0 +1,2 @@
+body{font-family:cursive;background-color:#fff}.text-yellow{color:#ffeb3b;margin-bottom:0}.darkText{color:#333}small{margin-left:10px}.todo{display:flex;justify-content:space-between;align-items:center}.todo-exit-active{animation:todo .8s ease-out forwards}.todo-enter-active{animation:todo .8s ease-out alternate-reverse}@keyframes todo{0%{transform:translateX(0)}30%{opacity:.7;transform:translateX(30px)}to{opacity:0;transform:translateX(-200px)}}@media(max-width:450px){.display-4{font-size:2em}}
+/*# sourceMappingURL=main.fca99832.chunk.css.map */
